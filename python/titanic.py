@@ -16,10 +16,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os as os
 
+import preprocess.preprocessing_titanic as pp_titanic
+
 train = pd.read_csv("../resources/train.csv")
 test = pd.read_csv("../resources/test.csv")
 submit = pd.read_csv("../resources/gender_submission.csv")
 
-
-
+dataInfo = pp_titanic.dataView(train)
+print(dataInfo.head5)
+print(dataInfo.info)
 
